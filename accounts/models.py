@@ -1,7 +1,7 @@
-from django.db import models  # type: ignore[import-not-found]
-from django.conf import settings  # type: ignore[import-not-found]
-from django.dispatch import receiver  # type: ignore[import-not-found]
-from django.db.models.signals import post_save  # type: ignore[import-not-found]
+from django.db import models  
+from django.conf import settings
+from django.dispatch import receiver 
+from django.db.models.signals import post_save 
 # Create your models here.
 
 class Profile(models.Model):
