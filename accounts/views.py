@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from accounts.forms import SignUPForm
 from django.contrib.auth.forms import AuthenticationForm
+
 
 def signup_view(request):
     if request.method == "POST":
@@ -30,9 +31,13 @@ def login_view(request):
                 login(request, user)
                 next_url = request.POST.get('next') or request.GET('next')
                 return redirect(next_url or 'admin:index')
-        else:
+    else:
             form = AuthenticationForm
 
-        return render(request, 'admin:index', {'form': form})
-    
-    
+    return render(request, 'admin:index', {'form': form})
+
+def logout_view(request):
+    if request.method == 'POST':
+        logout(request)
+        messages.info(request, "You have been logged out successfully.")
+    return redirect('accounts:login')
