@@ -102,4 +102,14 @@ PUT: FULL UPDATE
 PATCH: PARTIAL UPDATE
 DELETE: DELETE
 
+CRUD 
+#C = Create
+#R = Read
+#U = Update
+#D = Delete
+
+
+STATUS CODE:
+POST:201
+GET:200
 
