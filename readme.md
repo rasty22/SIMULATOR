@@ -113,3 +113,7 @@ STATUS CODE:
 POST:201
 GET:200
 
+#MIGRATE
+1. python manage.py makemigrations
+2. python manage.py migrate
+
