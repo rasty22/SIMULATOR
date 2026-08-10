@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Airport Simulator</title>
+</head>
+<body>
+
+<h1>Airport Simulator</h1>
+
+<form method="POST" action="{% url 'accounts:logout' %}" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
+
+<hr>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
